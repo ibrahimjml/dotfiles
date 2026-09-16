@@ -1,0 +1,25 @@
+[
+  // duplicate line copy
+  { "keys": ["shift+alt+down"], "command": "duplicate_line" },
+  // open terminal
+  { "keys": ["alt+`"], "command": "toggle_terminus_panel" },
+  // Open a BRAND NEW Cmder terminal tab in your main editor view
+  {
+    "keys": ["alt+z"],
+    "command": "terminus_open",
+    "args": {
+      "config_name": "Cmder",
+      "title": "Cmder",
+      "cwd": "${folder}"
+    }
+  },
+  // Close the currently active terminal tab safely
+  {
+    "keys": ["alt+x"],
+    "command": "terminus_close"
+  },
+  // close project tab
+  { "keys": ["alt+w"], "command": "close_workspace" },
+  // LSP: restar servers shortcut
+  { "keys": ["ctrl+alt+r"], "command": "lsp_restart_server" }
+]

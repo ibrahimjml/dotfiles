@@ -1,0 +1,199 @@
+{
+  // ==========================================
+  // PHP CONFIGURATION & TOOLS
+  // ==========================================
+  "php.validate.executablePath": "C:/xampp/php/php.exe", // Path to the PHP
+  "php.validate.enable": false, // Disables built-in PHP validation
+  "[php]": {
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+  },
+  "files.associations": {
+    "*.blade.php": "blade"
+  },
+  "intelephense.diagnostics.enable": false,
+  "intelephense.files.exclude": [
+    "**/vendor/**",
+    "**/node_modules/**",
+    "**/*.blade.php"
+  ],
+  "php.problems.exclude": {
+    "**/*": ["PHP0417", "PHP6513", "PHP6508", "PHP2014", "PHP0406"],
+    "**/vendor": true
+  },
+
+  // ==========================================
+  // EDITOR CORE PREFERENCES & DISPLAY
+  // ==========================================
+  "editor.fontSize": 16, // Sets font size in pixels
+  "editor.tabSize": 2, // Sets tab indentation width to 2 spaces
+  "editor.detectIndentation": false, // Ignores file-detected indentation and uses editor settings
+  "editor.renderWhitespace": "none", // Hides visual rendering of whitespace characters
+  "editor.minimap.enabled": false, // Hides the code minimap on the right side
+  "editor.linkedEditing": true, // Enables concurrent renaming of paired HTML/XML tags
+  "editor.stickyTabStops": true, // Emulates tab stop behavior when deleting spaces
+  "editor.stickyScroll.enabled": false, // Disables sticky scroll for code scopes at top of editor
+  "editor.largeFileOptimizations": true, // Optimizes performance for large files
+  "editor.overtypeCursorStyle": "line", // Sets cursor style in overtype mode
+  "editor.hover.delay": 1500, // Delay in ms before showing hover tooltips
+  "editor.hover.hidingDelay": 100, // Delay in ms before hiding hover tooltips
+  "editor.scrollbar.verticalScrollbarSize": 19, // Width of vertical scrollbar
+  "editor.scrollbar.horizontalScrollbarSize": 19, // Height of horizontal scrollbar
+  "diffEditor.ignoreTrimWhitespace": false, // Includes leading/trailing whitespace changes in diff views
+  "diffEditor.codeLens": true, // Shows code lens in diff editor
+  "editor.inlineSuggest.edits.showCollapsed": true, // Shows inline edit suggestions collapsed
+
+  // ==========================================
+  // FORMATTING & LANGUAGE FORMATTERS
+  // ==========================================
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": {
+    "editor.quickSuggestions": { "strings": true },
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
+  "javascript.updateImportsOnFileMove.enabled": "always", // Automatically updates file import paths when moving files
+  "javascript.suggest.autoImports": true, // Suggests auto-imports for JavaScript
+
+  // ==========================================
+  // DART & FLUTTER DEVELOPMENT
+  // ==========================================
+  "[dart]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "dart.previewFlutterUiGuides": true, // Shows visual UI guide lines for Flutter widgets
+  "dart.showInspectorNotificationsForWidgetErrors": false,
+  "dart.debugExternalPackageLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "dart.flutterHotReloadOnSave": "all",
+  "dart.hotReloadOnSave": "all",
+
+  // ==========================================
+  // EMMET & PATH INTELLISENSE
+  // ==========================================
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "ejs": "html"
+  },
+  "emmet.excludeLanguages": ["markdown"], // Disables Emmet suggestions in Markdown files
+  "path-intellisense.autoTriggerNextSuggestion": true, // Automatically triggers path suggestions
+
+  // ==========================================
+  // WORKBENCH, THEME & EXPLORER UI
+  // ==========================================
+  "workbench.colorTheme": "Dark Modern", // Sets the overall color theme
+  "workbench.iconTheme": "a-file-icon-vscode", // Sets the file icon theme
+  "a-file-icon-vscode.activeIconPacks": ["angular", "rails"],
+  "workbench.startupEditor": "none", // Opens a blank space on startup instead of a welcome page
+  "workbench.editor.pinnedTabSizing": "shrink", // Shrinks pinned tabs to save space
+  "workbench.editor.decorations.colors": true,
+  "workbench.editor.decorations.badges": true,
+  "explorer.decorations.colors": false,
+  "explorer.decorations.badges": false,
+  "explorer.compactFolders": false, // Expands single-child folders separately in the explorer
+  "explorer.copyRelativePathSeparator": "/", // Uses forward slashes when copying relative paths
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "compact",
+  "window.customMenuBarAltFocus": true,
+  "vscode_vibrancy.theme": "Default Light",
+
+  // ==========================================
+  // TERMINAL CONFIGURATION
+  // ==========================================
+  "terminal.integrated.defaultProfile.windows": "Cmder", // Sets default integrated terminal to Cmder on Windows
+  "terminal.integrated.profiles.windows": {
+    "Cmder": {
+      "path": "cmd.exe",
+      "args": ["/k", "C:\\cmder\\vendor\\init.bat"],
+      "overrideName": true
+    }
+  },
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.suggest.providers": {
+    "lsp": false,
+    "terminal-suggest": true
+  },
+
+  // ==========================================
+  // GIT VERSION CONTROL
+  // ==========================================
+  "git.enableSmartCommit": true, // Automatically stages all changes when committing if none are staged
+  "git.autofetch": true, // Automatically fetches updates from remote repositories
+  "git.confirmSync": false, // Skips confirmation dialogs when syncing/pulling/pushing
+  "git.ignoreMissingGitWarning": true, // Suppresses missing git warnings
+  "git.openRepositoryInParentFolders": "never",
+
+  // ==========================================
+  // SEARCH, FILES, & PERFORMANCE EXCLUSIONS
+  // ==========================================
+  "files.autoSave": "afterDelay", // Automatically saves dirty files after a delay
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/vendor/**": true,
+    "**/storage/logs/**": true,
+    "**/bootstrap/cache/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true
+  },
+  "typescript.tsserver.maxTsServerMemory": 4096, // Allocates 4GB RAM max for TypeScript server
+
+  // ==========================================
+  // LIVE SERVER EXTENSION SETTINGS
+  // ==========================================
+  "liveServer.settings.donotShowInfoMsg": true, // Hides startup info notifications from Live Server
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.CustomBrowser": "chrome", // Opens Live Server in Google Chrome
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+  "liveServer.settings.ChromeDebuggingAttachment": false,
+
+  // ==========================================
+  // MISC / OTHER EXTENSIONS & WORKSPACE
+  // ==========================================
+  "security.workspace.trust.untrustedFiles": "open", // Allows opening untrusted files without strict warnings
+  "security.promptForLocalFileProtocolHandling": false,
+  "editor.quickSuggestions": { "strings": "on" },
+  "editor.unicodeHighlight.allowedCharacters": { "ط§": true, "ظ‡": true },
+  "editor.unicodeHighlight.allowedLocales": { "es": true },
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.sql": "default",
+    "*.sqlite": "default"
+  },
+  "json.schemas": [{ "exclude": ["node_modules"] }],
+  "mcpServers": {},
+  "geminicodeassist.inlineSuggestions.enableAuto": false,
+  "workbench.settings.applyToAllProfiles": [],
+  "chat.viewSessions.orientation": "stacked",
+  "remote.SSH.remotePlatform": {
+    "digital-ocean": "linux",
+    "aws-ec2": "linux"
+  },
+  "vscode-edge-devtools.webhintInstallNotification": true
+}

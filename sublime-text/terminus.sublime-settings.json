@@ -1,0 +1,20 @@
+// make Cmder default terminal
+
+{
+  "default_config": {
+    "linux": null,
+    "osx": null,
+    "windows": "Cmder"
+  },
+  "shell_configs": [
+    {
+      "name": "Cmder",
+      "title": "Cmder",
+      "cmd": ["cmd.exe", "/k", "C:\\cmder\\vendor\\init.bat"],
+      "env": {},
+      "enable": true,
+      "default": true,
+      "platforms": ["windows"]
+    }
+  ]
+}

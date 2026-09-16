@@ -1,0 +1,19 @@
+{
+  "ignored_packages": ["Vintage"],
+  "index_files": true,
+  "folder_exclude_patterns": [".git"],
+  "index_exclude_patterns": ["*.log", "node_modules/**"],
+  // sublime merge path
+  "sublime_merge_path": "C:\\Program Files\\Sublime Merge\\sublime_merge.exe",
+  "font_size": 12, //font size
+  "font_face": "Jetbrains Mono", // font face
+  "save_on_focus_lost": true, // auto save on switch tab
+  "highlight_line": true, // highlight
+  "caret_style": "phase", // caret style
+  "line_padding_bottom": 12,
+  "theme": "Adaptive.sublime-theme",
+  // custom theme
+  // browse Packages and paste aura-theme.tmTheme
+  "color_scheme": "Packages/Aura Theme Color Scheme/aura-theme.tmTheme",
+  "word_wrap": false
+}

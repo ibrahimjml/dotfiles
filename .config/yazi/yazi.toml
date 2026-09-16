@@ -1,0 +1,17 @@
+[opener]
+
+[preview]
+
+max_width = 1200
+max_height = 1200
+image_preview_delay = 150
+
+image_quality = 50
+
+[manager]
+ratio = [ 1, 4, 3 ]
+
+[plugin]
+prepend_previewers = [
+  { mime = "image/*", run = "image" }
+]
