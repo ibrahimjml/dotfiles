@@ -1,0 +1,40 @@
+[include]
+        path = ~/.config/delta/theme.gitconfig
+
+[user]
+	email = 169608250+ibrahimjml@users.noreply.github.com
+	name = ibrahimjml
+	signingkey = ~/.ssh/ibrahim-profile.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[merge]
+        conflictStyle = zdiff3
+[init]
+        defaultBranch = main
+[branch]
+	# sort bt recent
+        sort = -committerdate
+[checkout]
+	defaultRemote = origin
+[fetch]
+        # keep local and remote synced remove deleted branches on fetch pull
+        prune = true
+[core]	
+	editor = nvim
+        pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	features = mellow-barbet
+	navigate = true
