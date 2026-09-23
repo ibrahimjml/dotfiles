@@ -1,0 +1,31 @@
+pwd=cd
+clear=cls
+unalias=alias /d $1
+vi=vim $*
+..=cd ..
+...=cd ../..
+s.=subl .
+c.=code .
+nv=nvim $*
+rs=redis-server
+phpsp=php -S localhost:$*
+pa=php artisan
+pas=php artisan serve
+pastp=php artisan serve --env=testing --port=$*
+pakg=php artisan key:generate
+pakgt=php artisan key:generate --env=testing
+pasl=php artisan storage:link
+pam=php artisan migrate
+pamfs=php artisan migrate:fresh --seed
+pamfst=php artisan migrate:fresh --seed --env=testing
+pamt=php artisan migrate --env=testing
+pamc=php artisan make:controller $*
+pamm=php artisan make:model $*
+pammg=php artisan make:migration $*
+pams=php artisan make:class Services/$*
+pamt=php artisan make:class Traits/$*
+pame=php artisan make:class Enums/$*
+gs=git status
+ga=git add .
+gc=git commit -m $*
+gl=git log --oneline --all --graph --decorate $*
